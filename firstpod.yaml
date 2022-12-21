@@ -8,6 +8,6 @@ spec:
     - image: nginx:1.23
       name: mike-pod
       ports:
-        - containerPort: 8080
+        - containerPort: 80
           protocol: TCP
 
