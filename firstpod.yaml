@@ -5,8 +5,8 @@ metadata:
   name: nginx
 spec:
   containers:
-    - name: mike-pod
     - image: nginx:1.23
+    - name: mike-pod
     - ports:
         - containerPort: 8080
         - protocol: TCP
