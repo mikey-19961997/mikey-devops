@@ -9,5 +9,6 @@ spec:
       name: mike-pod
       ports:
         - containerPort: 80
+          hostPort: 80
           protocol: TCP
 
