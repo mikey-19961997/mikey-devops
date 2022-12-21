@@ -4,9 +4,10 @@ kind: Pod
 metadata:
   name: nginx
 spec:
-  name: mike-pod
-  image: nginx:1.23
-  ports:
-    - containerPort: 8080
-    - protocol: TCP
+  containers:
+    - name: mike-pod
+    - image: nginx:1.23
+    - ports:
+        - containerPort: 8080
+        - protocol: TCP
 
