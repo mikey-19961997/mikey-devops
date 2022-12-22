@@ -6,7 +6,7 @@ metadata:
   labels:
     app: alpine
 spec:
-  initcontainers:
+  initContainers:
     - image: alpine:3
       name: mikey-init1
       command: 
@@ -21,7 +21,7 @@ metadata:
   labels:
     app: alpine
 spec:
-  initcontainers:
+  initContainers:
     - image: alpine:3
       name: mikey-init2
       command: 
