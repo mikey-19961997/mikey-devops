@@ -8,13 +8,13 @@ spec:
   replicas: 5
   selector:
     app: nginx
-    ver: 1.23
+    ver: "1.23"
   template:
     metadata:
       name: mikey-pod4
       labels:
         app: nginx
-        ver: 1.23
+        ver: "1.23"
     spec:
       containers:
         - image: nginx:1.23
