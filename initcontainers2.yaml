@@ -1,0 +1,21 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mikey-pod3
+  labels:
+    app: alpine
+spec:
+  initContainers:
+    - image: alpine:3
+      name: initcontainer3
+      command: 
+        - sleep
+      args:
+        - 15s
+    - image: alpine:3
+      name: initcontainer4
+      command:
+        - sleep
+      args:
+        - 15s
