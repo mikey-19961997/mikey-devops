@@ -17,5 +17,5 @@ spec:
       name: mikey-pod2
       ports:
         - containerPort: 8080
-          hostPort: 8081
+          hostPort: 80
           protocol: TCP
