@@ -21,20 +21,8 @@ metadata:
     name: ravi
 spec:
   containers:
-    - image: nginx:1.23
+    - image: jenkins/jenkins:2.383
       name: mikey2
       ports:
         - containerPort: 80
           protocol: TCP
----
-apiVersion: v1
-kind: Service
-metadata: 
-  name: mikey-svc
-spec:
-  selector:
-    name: ravi
-  ports:
-    - name: webport
-      port: 35000
-      targetport: 80
