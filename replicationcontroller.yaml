@@ -7,7 +7,7 @@ spec:
   minReadySeconds: 3
   replicas: 6
   selector:
-    ver: "1.23"
+    app: nginx
   template:
     metadata:
       name: mikey-pod6
