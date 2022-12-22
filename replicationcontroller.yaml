@@ -12,7 +12,6 @@ spec:
     metadata:
       name: mikey-pod6
       labels:
-        app: nginx
         ver: "1.23"
     spec:
       containers:
