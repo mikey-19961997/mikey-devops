@@ -3,7 +3,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: mikey-pod
-  labels: apps
+  labels:
+    name: apps
 spec:
   containers:
     - image: nginx:1.23
