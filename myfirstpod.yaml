@@ -28,7 +28,7 @@ spec:
           protocol: TCP
 ---
 apiVersion: v1
-kind: service
+kind: Service
 metadata: 
   name: mikey-svc
 spec:
