@@ -27,7 +27,7 @@ spec:
       command: 
         - sleep
       args:
-        - 30s
+        - 15s
 ---
 apiVersion: v1
 kind: Pod
