@@ -1,0 +1,44 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: initcontainer1
+  labels:
+    app: alpine
+spec:
+  initcontainers:
+    - image: alpine:3
+      name: mikey-init1
+      command: 
+        - sleep
+      args:
+        - 30s
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: initcontainer2
+  labels:
+    app: alpine
+spec:
+  initcontainers:
+    - image: alpine:3
+      name: mikey-init2
+      command: 
+        - sleep
+      args:
+        - 30s
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mikey-pod
+  labels: 
+    app: nginx
+spec:
+  containers:
+    - image: nginx:1.23
+      name: mikey3
+      ports:
+        - containerPort: 80
+          protocol: TCP
