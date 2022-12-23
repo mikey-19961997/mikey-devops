@@ -10,14 +10,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      database: mysql
+      database: redis
   strategy: 
     maxSurge: 25%
     maxUnavailable: 25%
   template:
     metadata:
       labels:
-        database: mysql
+        database: redis
     spec:
       containers: 
         - image: library/redis:5.0-alpine

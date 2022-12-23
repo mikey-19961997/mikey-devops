@@ -4,20 +4,20 @@ kind: Deployment
 metadata:
   name: saleor-db
   labels: 
-    database: mysql
+    database: saleor
 spec:
   minReadySeconds: 3
   replicas: 1
   selector:
     matchLabels:
-      database: mysql
+      database: saleor
   strategy: 
     maxSurge: 25%
     maxUnavailable: 25%
   template:
     metadata:
       labels:
-        database: mysql
+        database: saleor
     spec:
       containers: 
         - image: shaikkhajaibrahim/saleor-dashboar:DEV

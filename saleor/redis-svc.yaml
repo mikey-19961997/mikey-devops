@@ -7,7 +7,7 @@ spec:
   type: ClusterIP
   selector: 
     matchLabels:
-      database: mysql
+      database: redis
   ports:
     - targetPort: 6379
       protocol: TCP
