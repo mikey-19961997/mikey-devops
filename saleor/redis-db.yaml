@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: mikey-db1
   labels: 
-    database: mysql
+    database: redis
 spec:
   minReadySeconds: 3
   replicas: 1
