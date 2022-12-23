@@ -7,7 +7,7 @@ spec:
   type: ClusterIP
   selector: 
     matchLabels:
-      database: mysql
+      deployment: saleor
   ports:
     - targetPort: 6379
       port: 35000

@@ -10,14 +10,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      database: saleor
+      deployment: saleor
   strategy: 
     maxSurge: 25%
     maxUnavailable: 25%
   template:
     metadata:
       labels:
-        database: saleor
+        deployment: saleor
     spec:
       containers: 
         - image: shaikkhajaibrahim/saleor-dashboar:DEV
