@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: saleor-db
   labels: 
-    database: saleor
+    deployment: saleor
 spec:
   minReadySeconds: 3
   replicas: 1
