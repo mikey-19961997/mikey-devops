@@ -32,7 +32,7 @@ metadata:
 spec:
   selector:
     app: nginx
-  type: nodePort
+  type: N odePort
   ports:
     - port: 35000
       protocol: TCP
