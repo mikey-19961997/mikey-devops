@@ -22,20 +22,6 @@ spec:
           ports:
             - containerPort: 80
               protocol: TCP
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: rc-svc
-  labels: 
-    app: nginx
-spec:
-  selector:
-    app: nginx
-  type: NodePort
-  ports:
-    - port: 80
-      protocol: TCP
-      targetPort: 80
+
 
   
