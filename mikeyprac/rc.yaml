@@ -32,7 +32,7 @@ metadata:
 spec:
   selector:
     app: nginx
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - port: 80
       protocol: TCP
