@@ -35,6 +35,5 @@ spec:
     app: nginx
   ports:
     - targetPort: 80
-      nodePort: 30000
-      port: 35000
+      port: 30000
       protocol: TCP
