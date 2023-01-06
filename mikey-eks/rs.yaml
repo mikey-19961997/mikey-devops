@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: mikey-rs
+  name: mikey-rs1
   labels:
     app: jenkins
 spec:
@@ -30,7 +30,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mikey-svc1
+  name: mikey-svc2
   labels:
     app: jenkins
 spec:
