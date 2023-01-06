@@ -30,7 +30,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mikey-svc1
+  name: mikey-svc2
   labels:
     app: jenkins
 spec:
