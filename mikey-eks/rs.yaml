@@ -10,7 +10,7 @@ spec:
   replicas: 6
   selector:
     matchExpressions:
-      - key: test
+      - key: app
         operator: In
         values:
           - jenkins
