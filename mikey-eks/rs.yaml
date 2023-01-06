@@ -10,10 +10,10 @@ spec:
   replicas: 5
   selector:
     matchExpressions:
-      - key: app
-        operator: In
+      - key: test
+        operator: NotIn
         values: 
-          - jenkins
+          - nginx
   template:
     metadata:
       name: mikey-jenkins
