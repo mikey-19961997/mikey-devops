@@ -18,7 +18,7 @@ spec:
         app: jenkins
     spec:
       containers:
-        - image: jenkins
+        - image: jenkins:2.60.3
           name: mikey-containers
           ports:
             - containerPort: 8080
