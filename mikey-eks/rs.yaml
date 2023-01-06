@@ -10,8 +10,8 @@ spec:
   replicas: 6
   selector:
     matchExpressions:
-      - key: app
-        operator: In
+      - key: mikey
+        operator: NotIn
         values:
           - jenkins
   template:
