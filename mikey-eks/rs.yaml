@@ -12,7 +12,8 @@ spec:
     matchExpressions:
       - key: app
         operator: in
-        values: jenkins
+        values: 
+          - jenkins
   template:
     metadata:
       name: mikey-jenkins
