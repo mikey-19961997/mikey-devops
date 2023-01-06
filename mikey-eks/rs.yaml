@@ -7,13 +7,10 @@ metadata:
     app: jenkins
 spec:
   minReadySeconds: 3
-  replicas: 5
+  replicas: 6
   selector:
-    matchExpressions:
-      - key: test
-        operator: NotIn
-        values: 
-          - nginx
+    matchLables:
+      app: jenkins
   template:
     metadata:
       name: mikey-jenkins
