@@ -11,6 +11,11 @@ spec:
   selector:
     matchLabels:
       app: jenkins
+    matchExpressions:
+      - key: test
+        operator: NotIn
+        values:
+          - nginx
   template:
     metadata:
       name: mikey-jenkins
