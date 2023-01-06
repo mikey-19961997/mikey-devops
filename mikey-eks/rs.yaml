@@ -11,9 +11,9 @@ spec:
   selector:
     matchExpressions:
       - key: app
-        operator: NotIn
+        operator: In
         values: 
-          - jenkins/jenkins
+          - jenkins
   template:
     metadata:
       name: mikey-jenkins
