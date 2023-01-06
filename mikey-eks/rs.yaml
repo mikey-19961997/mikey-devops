@@ -24,34 +24,6 @@ spec:
             - containerPort: 8080
               protocol: TCP
 ---
-apiVersion: apps/v1
-kind: ReplicaSet
-metadata:
-  name: mikey-rs
-  labels:
-    app: jenkins
-spec:
-  minReadySeconds: 3
-  replicas: 6
-  selector:
-    matchExpressions:
-      - key: test
-        operator: NotIn
-        values:
-          - nginx
-  template:
-    metadata:
-      name: mikey-jenkins
-      labels:
-        app: jenkins
-    spec:
-      containers:
-        - image: jenkins:2.60.3
-          name: mikey-containers
-          ports:
-            - containerPort: 8080
-              protocol: TCP
----
 apiVersion: v1
 kind: Service
 metadata:
