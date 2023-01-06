@@ -13,7 +13,7 @@ spec:
       - key: test
         operator: In
         values:
-          - nginx
+          - jenkins
   template:
     metadata:
       name: mikey-jenkins
