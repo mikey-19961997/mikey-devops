@@ -8,8 +8,9 @@ metadata:
 spec:
   restartPolicy: Always
   containers:
-    - image: nginx:1.23
+    - image: alpine:3
       name: mikey1
-      ports:
-        - containerPort: 80
-          protocol: TCP
+      command:
+        - sleep
+        - 15s
+     
