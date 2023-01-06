@@ -9,8 +9,10 @@ spec:
   minReadySeconds: 3
   replicas: 5
   selector:
-    matchLabels:
-      app: jenkins
+    matchExpressions:
+      - key: app
+        operator: in
+        values: jenkins
   template:
     metadata:
       name: mikey-jenkins
