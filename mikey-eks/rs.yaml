@@ -32,10 +32,10 @@ kind: Service
 metadata:
   name: mikey-svc1
   labels:
-    app: nginx
+    app: jenkins
 spec:
   selector:
-    app: jenkins
+    app: nginx
   type: LoadBalancer
   ports:
     - port: 35000
