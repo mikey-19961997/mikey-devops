@@ -13,7 +13,7 @@ spec:
       - key: mikey
         operator: NotIn
         values:
-          - jenkins
+          - rockstar
   template:
     metadata:
       name: mikey-jenkins
