@@ -26,8 +26,7 @@ spec:
       initContainers:
         - image: alpine:3
           name: prac-init
-          command:
-            - ["ping","-c","10","google.com"]
+          command: ["ping","-c","10","google.com"]
 ---
 apiVersion: v1
 kind: Service
