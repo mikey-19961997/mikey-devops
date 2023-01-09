@@ -29,7 +29,7 @@ kind: Service
 metadata:
   name: prac-svc
 spec:
-  selectors:
+  selector:
     app: jenkins
   ports:
     - targetPort: 8080
