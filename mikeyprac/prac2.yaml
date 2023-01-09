@@ -1,0 +1,38 @@
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: prac-rs
+  labels:
+    app: jenkins
+spec:
+  minReadySeconds: 3
+  replicas: 5
+  selector:
+    matchLabels:
+      app: jenkins
+  template:
+    metadata:
+      name: mikey-pods
+      labels:
+        app: jenkins
+    spec:
+      containers:
+        - image: jenkins:2.60.3
+          name: prac-containers
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prac-svc
+spec:
+  selectors:
+    app: jenkins
+  ports:
+    - targetPort: 8080
+      port: 35000
+  type: LoadBalancer
+  
