@@ -23,11 +23,6 @@ spec:
           ports:
             - containerPort: 80
               protocol: TCP
-        - image: jenkins:2.60.3
-          name: prac-container2
-          ports:
-            - containerPort: 80
-              protocol: TCP
 ---
 apiVersion: v1
 kind: Service
