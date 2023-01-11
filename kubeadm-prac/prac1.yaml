@@ -7,7 +7,7 @@ metadata:
     app: nginx
 spec:
   minReadySeconds: 3
-  replicas: 10
+  replicas: 5
   selector:
     matchLabels:
       app: nginx
@@ -19,7 +19,12 @@ spec:
     spec:
       containers:
         - image: nginx
-          name: prac-container
+          name: prac-container1
+          ports:
+            - containerPort: 80
+              protocol: TCP
+        - image: jenkins:2.60.3
+          name: prac-container2
           ports:
             - containerPort: 80
               protocol: TCP
