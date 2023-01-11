@@ -31,7 +31,7 @@ metadata:
 spec:
   selector:
     app: nginx
-  type: ClusterIP
+  type: NodePort
   ports:
     - port: 35000
       targetPort: 80        
