@@ -21,5 +21,6 @@ spec:
           value: mikey1
       volumeMounts:
         - mountPath: /var/lib/mysql
+          name: mysql-vol
   volumes:
     - emptyDir:
