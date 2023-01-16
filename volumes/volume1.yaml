@@ -2,10 +2,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mysql-pod
+  name: mysqlpod
 spec:
   containers:
-    - name: mysql-cont
+    - name: mysqlcont
       image: mysql:8.0.31-debian
       ports:
         - containerPort: 3306
@@ -14,14 +14,14 @@ spec:
         - name: MYSQL_ROOT_PASSWORD
           value: mikey
         - name: MYSQL_DATABASE
-          value: mikey-database
+          value: mikeydatabase
         - name: MYSQL_USER
           value: mikey1
         - name: MYSQL_PASSWORD
           value: mikey1
       volumeMounts:
         - mountPath: /var/lib/mysql
-          name: mysql-vol
+          name: mysqlvol
   volumes:
     - emptyDir:
-      name: mysql-vol
+      name: mysqlvol
