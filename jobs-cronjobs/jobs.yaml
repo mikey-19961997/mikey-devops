@@ -9,6 +9,7 @@ spec:
     metadata:
       name: mikey-pod
     spec:
+      restartPolicy: OnFailure
       containers:
         - image: alpine:3
           name: mikey-cont1
