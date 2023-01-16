@@ -1,0 +1,25 @@
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: mycron-job
+  namespace: mike-namespace
+spec:
+  schedule: "1 * * * *"
+  jobTemplate: 
+    metadata:
+      name: mikey-job
+    spec:
+      backoffLimit: 3
+      template:
+        metadata:
+          name: mikey-pod
+          namespace: mike-namespace
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - image: alpine:3
+              name: mikey-cont1
+              command:
+                - wget
+                - https://referenceapplicationskhaja.s3.us-west-2.amazonaws.com/spring-petclinic-2.4.2.jar
