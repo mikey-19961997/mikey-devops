@@ -3,11 +3,13 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: mikey-job
+  namespace: mike-namespace
 spec:
   backoffLimit: 3
   template:
     metadata:
       name: mikey-pod
+      namespace: mike-namespace
     spec:
       restartPolicy: OnFailure
       containers:
