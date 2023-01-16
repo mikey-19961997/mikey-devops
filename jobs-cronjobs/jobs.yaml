@@ -1,0 +1,17 @@
+---
+apiVersion: batch/v1
+kind: 	Job
+metadata:
+  name: mikey-job
+spec:
+  backoffLimit: 3
+  template:
+    metadata:
+      name: mikey-pod
+  spec:
+    containers:
+      - image: alpine:3
+        name: mikey-cont1
+        command:
+          - sleep
+          - 60s
