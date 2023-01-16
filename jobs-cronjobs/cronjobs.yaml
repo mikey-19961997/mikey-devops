@@ -5,7 +5,7 @@ metadata:
   name: mycron-job
   namespace: mike-namespace
 spec:
-  schedule: "1 * * * *"
+  schedule: "3 * * * *"
   jobTemplate: 
     metadata:
       name: mikey-job
