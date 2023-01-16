@@ -39,5 +39,5 @@ spec:
   type: LoadBalancer
   ports:
     - port: 35000
-      targetPort: 8080
+      targetPort: 80
       protocol: TCP
