@@ -28,9 +28,9 @@ spec:
               protocol: TCP
           resources:
             requests:
-              memory: 256mi
+              memory: 256Mi
             limits:
-              memory: 512mi
+              memory: 512Mi
 ---
 apiVersion: v1
 kind: Service
