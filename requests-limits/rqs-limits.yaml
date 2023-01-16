@@ -1,0 +1,48 @@
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: mikey-rs1
+  labels:
+    app: nginx
+spec:
+  minReadySeconds: 3
+  replicas: 3
+  selector:
+    matchExpressions:
+      - key: mikey
+        operator: NotIn
+        values:
+          - rockstar
+  template:
+    metadata:
+      name: mikey-jenkins
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - image: nginx
+          name: mikey-containers
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          resources:
+            requests:
+              memory: 256mi
+            limits:
+              memory: 512mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mikey-svc
+  labels:
+    app: nginx
+spec:
+  selector:
+    app: nginx
+  type: ClusterIP
+  ports:
+    - port: 35000
+      targetPort: 80
+      protocol: TCP
