@@ -22,4 +22,4 @@ spec:
               name: mikey-cont1
               command:
                 - sleep
-                - 15s
+                - 30s
