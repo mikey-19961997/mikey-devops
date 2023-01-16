@@ -4,7 +4,7 @@ kind: ReplicaSet
 metadata:
   name: mikey-rs1
   labels:
-    app: jenkins
+    app: nginx
 spec:
   minReadySeconds: 3
   replicas: 3
@@ -18,13 +18,13 @@ spec:
     metadata:
       name: mikey-jenkins
       labels:
-        app: jenkins
+        app: nginx
     spec:
       containers:
-        - image: jenkins:2.60.3
+        - image: nginx
           name: mikey-containers
           ports:
-            - containerPort: 8080
+            - containerPort: 80
               protocol: TCP
 ---
 apiVersion: v1
@@ -32,10 +32,10 @@ kind: Service
 metadata:
   name: mikey-svc
   labels:
-    app: jenkins
+    app: nginx
 spec:
   selector:
-    app: jenkins
+    app: nginx
   type: LoadBalancer
   ports:
     - port: 35000
