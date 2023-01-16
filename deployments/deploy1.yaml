@@ -16,18 +16,18 @@ spec:
     rollingUpdate: 
       maxSurge: 25%
       maxUnavailable: 25%
-    template:
-      metadata:
-        name: mikey-pod1
-        labels:
-          app: jenkins
-      spec:
-        containers:
-          - image: jenkins:1.625.1
-            name: mikey-cont1
-            ports:
-              - containerPort: 8080
-                protocol: TCP
+  template:
+    metadata:
+      name: mikey-pod1
+      labels:
+        app: jenkins
+    spec:
+      containers:
+        - image: jenkins:1.625.1
+          name: mikey-cont1
+          ports:
+            - containerPort: 8080
+              protocol: TCP
 ---
 apiVersion: v1
 kind: Service
