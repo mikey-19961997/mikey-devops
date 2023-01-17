@@ -19,4 +19,6 @@ spec:
     - name: mysqlpvc-vol
       persistentVolumeClaim: 
         claimName: mypvc
+        readOnly: false
+
       
