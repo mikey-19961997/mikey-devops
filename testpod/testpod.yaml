@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mikey-pod1
+  labels:
+    name: ravi
+spec:
+  containers:
+    - image: nginx:1.23
+      name: mikey1
+      ports:
+        - containerPort: 80
+          protocol: TCP
