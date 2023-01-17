@@ -12,6 +12,23 @@ spec:
       ports:
         - containerPort: 3306
           protocol: TCP
-          
+      env: 
+        - name: MYSQL_ROOT_PASSWORD
+          value: mikey
+        - name: MYSQL_DATABASE
+          value: mikeydatabase
+        - name: MYSQL_USER
+          value: mikey1
+        - name: MYSQL_PASSWORD
+          value: mikey1
+      volumeMounts:
+        - mountPath: /var/lib/mysql
+          name: mysqlpvc-vol
+  volumes:
+    - name: mysqlpvc-vol
+      persistentVolumeClaim: 
+        claimName: mypvc
+        readOnly: false
+
 
       
