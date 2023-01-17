@@ -9,7 +9,7 @@ spec:
   volumeMode: Filesystem
   resources:
     requests:
-      storage: 512Mi
+      storage: 1Gi
   storageClassName: gp2
 ---  
 apiVersion: v1
