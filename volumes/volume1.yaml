@@ -21,9 +21,7 @@ spec:
           value: mikey1
       volumeMounts:
         - mountPath: /var/lib/mysql
-          name: mysqlpvc-vol
+          name: mysqlvol
   volumes:
-    - name: mysqlpvc-vol
-      persistentVolumeClaim: 
-        claimName: mypvc
-        readOnly: false
+    - emptyDir:
+      name: mysqlvol
