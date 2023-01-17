@@ -1,27 +1,12 @@
 ---
 apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: mypvc
-spec:
-  accessModes: 
-    - ReadWriteOnce
-  volumeMode: Filesystem
-  resources:
-    requests:
-      storage: 512Mi
-  storageClassName: gp2
----  
-apiVersion: v1
 kind: Pod
 metadata:
-  name: mikey-pod
-  labels: 
-    app: mysql
+  name: mysqlpod
 spec:
   containers:
-    - image: mysql:8.0-debian
-      name: mikey-cont1
+    - name: mysqlcont
+      image: mysql:8.0.31-debian
       ports:
         - containerPort: 3306
           protocol: TCP
@@ -36,12 +21,8 @@ spec:
           value: mikey1
       volumeMounts:
         - mountPath: /var/lib/mysql
-          name: mysqlpvc-vol
+          name: mysql-vol
   volumes:
-    - name: mysqlpvc-vol
+    - name: mysql-vol
       persistentVolumeClaim: 
         claimName: mypvc
-        readOnly: false
-
-
-      
