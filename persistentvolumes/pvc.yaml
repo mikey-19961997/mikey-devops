@@ -13,5 +13,4 @@ spec:
     matchLabels: 
       app: mysql
   storageClassName: gp2
-  volumeName: mysqlpvc-vol
   
