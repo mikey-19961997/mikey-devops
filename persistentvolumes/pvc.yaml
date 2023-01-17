@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysqlpvc-vol
+spec:
+  storageClassName: gp2
+  

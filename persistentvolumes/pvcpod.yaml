@@ -1,0 +1,18 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mikey-pod
+spec:
+  containers:
+    - image: mysql:8.0.31-debian
+      name: mikey-cont1
+      ports:
+        - containerPort: 3306
+          protocol: TCP
+      volumeMounts:
+        - mountPath: /var/lib/mysql
+          name: mysqlpvc-vol
+  volumes:
+    - persistentVolumeClaim: mysqlpvc-vol
+      
