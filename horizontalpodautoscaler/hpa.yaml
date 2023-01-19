@@ -10,7 +10,7 @@ spec:
     - resource: 
         name: CPU
         target:
-          averageUtilization: 70%
+          averageUtilization: 70
           type: Utilization
   scaleTargetRef:
     apiVersion: apps/v1
