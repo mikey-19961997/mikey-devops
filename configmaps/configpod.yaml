@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mikey-pod
+spec:
+  containers:
+    - name: mikey-cont
+      image: alpine:3
+      command:
+        - sleep
+        - 1d
+      envFrom:
+        - configMapRef:
+            name:  mikey-configmaps

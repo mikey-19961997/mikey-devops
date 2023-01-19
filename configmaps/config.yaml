@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mikey-configmaps
+data:
+  log_level: DEBUG
+  retries: "3"
+  timeout: 30s
+  
