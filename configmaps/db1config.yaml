@@ -3,8 +3,6 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: mysqlpod2
-  annotations:
-    configmap.reloader.stakater.com/reload: "myconfigdb"
 spec:
   containers:
     - name: mysqlcont
