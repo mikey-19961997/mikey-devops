@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name: myconfigdb
 data:
-  MYSQL_ROOT_PASSWORD: rockstardb
-  MYSQL_DATABASE: "3306"
-  MYSQL_USER: POSTGRESS
-  MYSQL_PASSWORD: rockstar
+  datbase_name: rockstardb
+  database_port: "3306"
+  database_engine: POSTGRESS
+  database_rootpasswd: rockstar
