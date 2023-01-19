@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mysqlpod
+  name: mysqlpod2
 spec:
   containers:
     - name: mysqlcont
