@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name: myconfigdb
 data:
-  datbase_name: ravidb
-  database_port: "3399"
-  database_engine: AMAZON
-  database_rootpasswd: ravi
+  datbase_name: ravidb1
+  database_port: "3306"
+  database_engine: AURORA
+  database_rootpasswd: ravi123
