@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name: myconfigdb
 data:
-  datbase_name: rockstardb
-  database_port: "3306"
-  database_engine: POSTGRESS
-  database_rootpasswd: rockstar
+  datbase_name: ravidb
+  database_port: "3399"
+  database_engine: AMAZON
+  database_rootpasswd: ravi
