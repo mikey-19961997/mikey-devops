@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name: myconfigdb
 data:
-  MYSQL_ROOT_PASSWORD: rockstar
-  MYSQL_DATABASE: mikeydb
-  MYSQL_USER: rockstar1
-  MYSQL_PASSWORD: rockstar2
+  datbase_name: mikeydb 
+  database_port: "3306"
+  database_engine: MYSQL
+  database_rootpasswd: mikey
