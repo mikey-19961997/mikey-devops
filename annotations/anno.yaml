@@ -20,7 +20,9 @@ metadata:
   labels:
     app: nginx
   annotations:
-    kubernetes.io/role/internal-elb: "1"
+    service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+    service.beta.kubernetes.io/aws-load-balancer-scheme: internal
+    service.beta.kubernetes.io/aws-load-balancer-type: alb 
 spec:
   ports:
     - port: 35000
