@@ -5,6 +5,8 @@ metadata:
   name: mike-pod
   labels:
     app: nginx
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-internal: "true"
 spec:
   containers:
     - name: geethu-cont
