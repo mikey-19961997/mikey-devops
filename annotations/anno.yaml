@@ -18,7 +18,7 @@ kind: Service
 metadata:
   name: mike-svc
   annotations:
-    kubernetes.io/role/internal-elb: "1"
+    kubernetes.io/role/internal-elb: "01"
 spec:
   ports:
     - port: 35000
