@@ -20,7 +20,7 @@ metadata:
   labels:
     app: nginx
   annotations:
-    kubernetes.io/role/internal-elb: "1"
+    kubernetes.io/role/internal-elb: 1
 spec:
   ports:
     - port: 35000
