@@ -16,13 +16,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mike-svc
+  name: nginx-svc-lb
+  annotations:
+    kubernetes.io/role/internal-elb: "1"
 spec:
-  ports:
-    - port: 35000
-      protocol: TCP
-      targetPort: 80
+  type: LoadBalancer
   selector:
     app: nginx
-  type: LoadBalancer
-        
+  ports:
+    - name: webport
+      port: 35000
+      targetPort: 80
