@@ -1,0 +1,66 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mikey-deploy
+  labels:
+    app: jenkins
+spec:
+  minReadySeconds: 3
+  replicas: 5
+  selector:
+    matchLabels:
+      app: jenkins
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: 
+      maxSurge: 50%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      name: mikey-pod1
+      labels:
+        app: jenkins
+    spec:
+      containers:
+        - image: jenkins:1.625.1
+          name: mikey-cont1
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mikey-deploysvc
+  labels:
+    app: jenkins
+spec:
+  ports:
+    - port: 35000
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: jenkins
+  type: LoadBalancer
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: mikey-ingress
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Exact
+            backend:
+              service:
+                name: mikey-deploysvc
+                port:
+                  number: 35000
+      
+  
