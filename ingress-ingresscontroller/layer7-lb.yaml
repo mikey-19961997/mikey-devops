@@ -53,9 +53,10 @@ metadata:
     alb.ingress.kubernetes.io/scheme: internet-facing
 spec:
   rules:
-    - http:
+    - host: www.mikey.com
+      http:
         paths:
-          - path: /
+          - path: /*
             pathType: Exact
             backend:
               service:
